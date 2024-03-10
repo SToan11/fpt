@@ -3,31 +3,30 @@
 int main() {
     int a[10], n = 0;
     int i;
-    printf("Nhap so phan tu cua mang: ");
+    printf("Enter the number of elements in the array: ");
     scanf("%d", &n);
-    printf("Nhap so vao mang.\n");
+    printf("Enter numbers into the array.\n");
     for (i = 0; i < n; i++) {
         printf("a[%d] = ", i);
         scanf("%d", &a[i]);
     }
-    printf("Cac so chia het cho 3 trong mang.\n");
+    printf("Numbers divisible by 3 in the array.\n");
     for (i = 0; i < n; i++) {
         if (a[i] % 3 == 0) {
             printf("a[%d] = %d\n", i, a[i]);
         }
     }
-    float tong = 0, tb;
+    float sum = 0, avg;
     int count = 0;
     for (i = 0; i < n; i++) {
         if (a[i] % 3 == 0) {
-            tong += a[i];
+            sum += a[i];
             count++;
         }
     }
-    tb = tong / count;
-    printf("\nCo %d so chia het cho 3", count);
-    printf("\nTong: %.2f", tong);  
-    printf("\nTrung binh: %.2f", tb);  
+    avg = sum / count;
+    printf("\nThere are %d numbers divisible by 3", count);
+    printf("\nSum: %.2f", sum);  
+    printf("\nAverage: %.2f", avg);  
     return 0;
 }
-
