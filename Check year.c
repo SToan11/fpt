@@ -1,21 +1,27 @@
 #include<stdio.h>
 
-int checknamnhuan(int year) {
-	int check = 0;
-	if(year % 4 == 0 && year != 100 || year % 400 ==0){
-		check = 1;
-	}
-	return check;
+// Function to check if a year is a leap year
+int checkLeapYear(int year) {
+    int check = 0;
+    if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+        check = 1;
+    }
+    return check;
 }
 
 int main() {
-	printf("Kiem tra nam nhuan \n");
-	int y;
-	printf("Nhap nam: "); scanf("%d", &y);
-	int ck = checknamnhuan(y);
-	if(ck == 1) {
-		printf("%d la nam nhuan", y);
-	}else{
-		printf("%d khong phai nam nhuan", y);
-	}
+    printf("Leap Year Checker\n");
+    int year;
+    printf("Enter a year: ");
+    scanf("%d", &year);
+
+    int isLeapYear = checkLeapYear(year);
+
+    if (isLeapYear == 1) {
+        printf("%d is a leap year.", year);
+    } else {
+        printf("%d is not a leap year.", year);
+    }
+
+    return 0;
 }
