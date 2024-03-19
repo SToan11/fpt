@@ -1,25 +1,28 @@
 #include <stdio.h>
-#include <math.h>
 
 int main(){
-	printf("kiem tra so nguyen to \n");
-	int number;
-	printf("Nhap so: ");
-	scanf("%d", &number);
-	int count = 0;
-	if(number<2){
-		printf("%d khong phai la so nguyen to", number);
-	}
-	int a =2;
-	while(a<number){
-		if(number % a == 0){
-			count++;
-		}
-		a++;
-	}
-	if(count>0){
-		printf("%d khong phai la so nguyen to ", number);
-	}else{
-		printf("%d la so nguyen to", number); 
-	} 
+    printf("Prime Number Checker\n");
+    int number;
+    printf("Enter a number: ");
+    scanf("%d", &number);
+    int count = 0;
+
+    if(number < 2){
+        printf("%d is not a prime number", number);
+    } else {
+        int divisor = 2;
+        while(divisor < number){
+            if(number % divisor == 0){
+                count++;
+            }
+            divisor++;
+        }
+        if(count > 0){
+            printf("%d is not a prime number", number);
+        } else {
+            printf("%d is a prime number", number); 
+        } 
+    }
+
+    return 0;
 }
