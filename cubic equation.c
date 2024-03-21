@@ -1,33 +1,37 @@
 #include<stdio.h>
 #include<math.h>
-main()
-{
-    float a,b,c,d;
-    printf("Nhap so a: "); 
-    scanf("%f",&a);
-    printf("Nhap so b: ");
-    scanf("%f",&b);
-    printf("Nhap so c: ");
-    scanf("%f",&c);
-    if(a==0){
-        if(b==0){
-            if(c==0)
-                    printf("Phuong trinh co vo so nghiem");
-                else
-                    printf("Phuong trinh vo nghiem");
+
+int main() {
+    float a, b, c, d;
+    printf("Enter coefficient a: ");
+    scanf("%f", &a);
+    printf("Enter coefficient b: ");
+    scanf("%f", &b);
+    printf("Enter coefficient c: ");
+    scanf("%f", &c);
+
+    if (a == 0) {
+        if (b == 0) {
+            if (c == 0) {
+                printf("The equation has infinitely many solutions");
+            } else {
+                printf("The equation has no solution");
             }
-        else
-            printf("Phuong trinh co nghiem duy nhat la: %f",-c/b);
+        } else {
+            printf("The equation has a unique solution: %f", -c / b);
+        }
+    } else {
+        d = b * b - 4 * a * c;
+        if (d < 0) {
+            printf("The equation has no real solution");
+        } else if (d == 0) {
+            printf("The equation has a double solution: %f", -b / (2 * a));
+        } else {
+            float x1 = (-b + sqrt(d)) / (2 * a);
+            float x2 = (-b - sqrt(d)) / (2 * a);
+            printf("The equation has two distinct solutions: %f, %f", x1, x2);
+        }
     }
-    else
-    {
-        d=b*b-4*a*c;
-        if (d<0)
-            printf("Phuong trinh vo nghiem");
-        else if (d==0)
-            printf("Phuong trinh co nghiem kep la: %f",-b/(2*a));
-        else
-            printf("Phuong trinh co 2 nghiem phan biet la: %f,%f",(-b+sqrt(d))/(2*a),(-b-sqrt(d))/(2*a));    
-    }    
-  
+
+    return 0;
 }
