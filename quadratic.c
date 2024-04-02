@@ -1,31 +1,47 @@
-//pt bac 2
 #include<stdio.h>
-int main(){
-	printf("GIAI PHUONG TRINH BAC 2\n");
-	float d,x1,x2,n1,n2,n3;
-	int a,b;
-	printf ("nhap a= ");
-	scanf ("%f",&n1);
-	printf ("nhap b= ");
-	scanf ("%f",&n2);
-	printf ("nhap c= ");
-	scanf ("%f",&n3);
-	d=(n2*2)-4*(n1*n3);
-	x1=(-n2+sqrt(d))/(2*n1);
-	x2=(-n2-sqrt(d))/(2*n1);
-	if (n1==0) {
-		printf ("nghiem cua phuong trinh= %.1f\n",-n3/n2);
-	} else if (n1!=0) {
-		printf ("delta cua phuong trinh= %.1f\n",d);
-		if (d<0) {       
-			printf ("phuong trinh vo nghiem\n");
-		} else if (d==0) {
-			printf ("phuong trinh co nghiem kep x = %.1f\n",-b/(2*n1));
-		} else if (d>0) {
-			printf ("phuong trinh co hai nghiem rieng biet\n");
-			printf ("x1= %.1f\n",x1);
-			printf ("x2= %.1f\n",x2);
-			}
-	} 
-	return 0;
+#include<math.h>
+
+int main() {
+    printf("QUADRATIC EQUATION SOLVER\n");
+
+    float a, b, c;
+    float discriminant, x1, x2;
+
+    printf("Enter coefficient a: ");
+    scanf("%f", &a);
+    printf("Enter coefficient b: ");
+    scanf("%f", &b);
+    printf("Enter coefficient c: ");
+    scanf("%f", &c);
+
+    discriminant = b * b - 4 * a * c;
+
+    if (a == 0) {
+        printf("This is not a quadratic equation (a = 0).\n");
+        if (b != 0) {
+            printf("Linear equation: x = %.2f\n", -c / b);
+        } else {
+            if (c == 0) {
+                printf("Infinite solutions.\n");
+            } else {
+                printf("No solution.\n");
+            }
+        }
+    } else {
+        if (discriminant > 0) {
+            x1 = (-b + sqrt(discriminant)) / (2 * a);
+            x2 = (-b - sqrt(discriminant)) / (2 * a);
+            printf("Two distinct real roots:\n");
+            printf("x1 = %.2f\n", x1);
+            printf("x2 = %.2f\n", x2);
+        } else if (discriminant == 0) {
+            x1 = -b / (2 * a);
+            printf("One real root (double root):\n");
+            printf("x = %.2f\n", x1);
+        } else {
+            printf("No real roots (complex roots).\n");
+        }
+    }
+
+    return 0;
 }
