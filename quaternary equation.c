@@ -1,134 +1,159 @@
 #include <math.h>
 #include <stdio.h>
 #include <stdbool.h>
-int main () {
-	while (true){
-	int so; 
-	float diem;
-	printf ("1.Bai 1: tinh hoc luc              \n");
-	printf ("2.Bai 2.1: giai phuong trinh bac 1 \n");
-	printf ("3.Bai 2.2: giai phuong trinh bac 2 \n");
-	printf ("4.Bai 3: tinh tien dien            \n");
-	printf ("5.thoat                            \n");
-	printf ("nhap bai muon xem: ");
-        scanf ("%d",&so);
-		switch (so) {
-	float toan, ly, hoa,d,x1,x2,n1,n2,n3,dien;		
-		int a,b;
-	float soDien, tienDien;
- 	int bac1=1678, bac2=1734, bac3=2014, bac4=2536, bac5=2834, bac6=2927;
-			case 1:
-				printf("In hoc luc sinh vien\n");
-				printf("Nhap diem: ");
-				scanf("%f", &diem);
-				printf("Diem trung binh :%f\n", diem);
-				if(diem >=9){
-					printf("Hoc luc XUAT SAC\n");
-				}else{
-					if(diem>=8){
-						printf("Hoc luc GIOI\n");
-					}else{
-						if(diem>=6.5){
-							printf("Hoc luc KHA\n");
-						}else{
-							if(diem>=5){
-								printf("Hoc luc TRUNG BINH\n");
-							}else{
-								if(diem>=3.5){
-									printf("Hoc luc YEU\n");
-								}else{
-									printf("Hoc luc KEM\n");
-								}
-							}
-						}
-					}
-				}
-				printf ("Bam phim enter de tiep tuc.");
-	            getch( );
-		        system("cls");
-			break;
-			case 2:
-				printf("GIAI PHUONG TRINH BAC 1\n");
-				printf ("nhap a= ");
-				scanf ("%d",&a);
-				printf ("nhap b= ");				
-				scanf ("%d",&b);
-				if (a==0&b==0) {
-					printf ("phuong trinh vo so nghiem");
-				} else if(a==0&b!=0){
-					printf ("phuong trinh vo nghiem");
-						}
-						float x=-b/a;
-						printf ("nghiem cua phuong trinh= %.1f\n",x);
-						printf ("Bam phim enter de tiep tuc.");
-	      	          	getch( );
-				        system("cls");
-						break;
-			case 3:
-				printf("GIAI PHUONG TRINH BAC 2\n");
-	            printf ("nhap a= ");
-				scanf ("%f",&n1);
-				printf ("nhap b= ");
-				scanf ("%f",&n2);
-				printf ("nhap c= ");
-				scanf ("%f",&n3);
-				d=(n2*2)-4*(n1*n3);
-				x1=(-n2+sqrt(d))/(2*n1);
-				x2=(-n2-sqrt(d))/(2*n1);
-				if (n1==0) {
-					printf ("nghiem cua phuong trinh= %.1f\n",-n3/n2);
-				} else if (n1!=0) {
-					printf ("delta cua phuong trinh= %.1f\n",d);
-				  if (d<0) {       
-					printf ("phuong trinh vo nghiem\n");
-				} else if (d==0) {
-					printf ("phuong trinh co nghiem kep x = %.1f\n",-b/(2*n1));
-				} else if (d>0) {
-					printf ("phuong trinh co hai nghiem rieng biet\n");
-					printf ("x1= %.1f\n",x1);
-					printf ("x2= %.1f\n",x2);
-				}
-				} 
-				printf ("Bam phim enter de tiep tuc.");
-                getch( );
-	            system("cls");
-				break;
-			case 4:
-		printf("Nhap vao so dien (kWh): ");
-		scanf("%f",&soDien);
-		if(soDien<0){
-			printf("Vui long nhap lai So Dien\nSo dien khong duoc nho hon 0\n");
-		}else 	if(soDien<=50){
-			tienDien=soDien*bac1;
-			printf("so tien can tra: %.2f\n",tienDien);
-				}else if(soDien<=100){
-					tienDien=50*bac1+((soDien-50)*bac2);
-					printf("so tien can tra: %.2f\n",tienDien);
-					}else if(soDien<=200){
-						tienDien=50*bac1+(50*bac2)+((soDien-100)*bac3);
-						printf("so tien can tra: %.2f\n",tienDien);
-						}else if(soDien<=300){
-							tienDien=50*bac1+(50*bac2)+(100*bac3)+((soDien-200)*bac4);
-							printf("so tien can tra: %.2f\n",tienDien);
-							}else if(soDien<=400){
-								tienDien=50*bac1+(50*bac2)+(100*bac3)+(100*bac4)+((soDien-300)*bac5);
-								printf("so tien can tra: %.2f\n",tienDien);
-								}else if(soDien>400){
-									tienDien=50*bac1+(50*bac2)+(100*bac3)+(100*bac4)+(100*bac5)+((soDien-400)*bac6);
-									printf("so tien can tra: %.2f\n",tienDien);
-									}
-									getch( );
-    								system("cls");
-	    							break;
-	            case 5:
-				printf ("ban da thoat chuong trinh");
-				return 0;
-			default:
-				printf ("khong co bai do xin moi nhap lai\n");
-				printf ("Bam phim enter de tiep tuc.");
-                getch( );
-	            system("cls");
-		}
-	}
-}
 
+int main() {
+    while (true) {
+        int choice;
+        float score;
+
+        // Display menu options
+        printf("1. Exercise 1: Calculate student's academic performance\n");
+        printf("2. Exercise 2.1: Solve linear equation\n");
+        printf("3. Exercise 2.2: Solve quadratic equation\n");
+        printf("4. Exercise 3: Calculate electricity bill\n");
+        printf("5. Exit\n");
+        printf("Enter the exercise you want to view: ");
+        scanf("%d", &choice);
+
+        switch (choice) {
+            case 1:
+                // Calculate and display student's academic performance
+                printf("Calculate student's academic performance\n");
+                printf("Enter score: ");
+                scanf("%f", &score);
+                printf("Average score: %f\n", score);
+
+                // Determine and print academic performance based on score
+                if (score >= 9) {
+                    printf("Academic performance: EXCELLENT\n");
+                } else {
+                    if (score >= 8) {
+                        printf("Academic performance: GOOD\n");
+                    } else {
+                        if (score >= 6.5) {
+                            printf("Academic performance: AVERAGE\n");
+                        } else {
+                            if (score >= 5) {
+                                printf("Academic performance: BELOW AVERAGE\n");
+                            } else {
+                                if (score >= 3.5) {
+                                    printf("Academic performance: WEAK\n");
+                                } else {
+                                    printf("Academic performance: VERY WEAK\n");
+                                }
+                            }
+                        }
+                    }
+                }
+                printf("Press Enter to continue.");
+                getch();
+                system("cls");
+                break;
+
+            case 2:
+                // Solve and display linear equation
+                printf("Solve linear equation\n");
+                int a, b;
+                printf("Enter a: ");
+                scanf("%d", &a);
+                printf("Enter b: ");
+                scanf("%d", &b);
+
+                // Check coefficients and calculate solution
+                if (a == 0 && b == 0) {
+                    printf("The equation has infinite solutions.\n");
+                } else if (a == 0 && b != 0) {
+                    printf("The equation has no solution.\n");
+                } else {
+                    float x = -b / (float)a;
+                    printf("Solution of the equation: %.1f\n", x);
+                }
+                printf("Press Enter to continue.");
+                getch();
+                system("cls");
+                break;
+
+            case 3:
+                // Solve and display quadratic equation
+                printf("Solve quadratic equation\n");
+                float a2, b2, c2;
+                float delta, root1, root2;
+
+                printf("Enter a: ");
+                scanf("%f", &a2);
+                printf("Enter b: ");
+                scanf("%f", &b2);
+                printf("Enter c: ");
+                scanf("%f", &c2);
+
+                delta = b2 * b2 - 4 * a2 * c2;
+
+                if (a2 == 0) {
+                    printf("Solution of the equation: %.1f\n", -c2 / b2);
+                } else {
+                    if (delta < 0) {
+                        printf("The equation has no real solution.\n");
+                    } else if (delta == 0) {
+                        printf("The equation has a double root x = %.1f\n", -b2 / (2 * a2));
+                    } else {
+                        root1 = (-b2 + sqrt(delta)) / (2 * a2);
+                        root2 = (-b2 - sqrt(delta)) / (2 * a2);
+                        printf("The equation has two distinct real roots.\n");
+                        printf("Root 1: %.1f\n", root1);
+                        printf("Root 2: %.1f\n", root2);
+                    }
+                }
+                printf("Press Enter to continue.");
+                getch();
+                system("cls");
+                break;
+
+            case 4:
+                // Calculate and display electricity bill
+                printf("Calculate electricity bill\n");
+                float kWh, bill;
+
+                printf("Enter electricity consumption (kWh): ");
+                scanf("%f", &kWh);
+
+                // Calculate bill based on consumption
+                if (kWh < 0) {
+                    printf("Invalid input. Please enter a non-negative value.\n");
+                } else {
+                    if (kWh <= 50) {
+                        bill = kWh * 1678;
+                    } else if (kWh <= 100) {
+                        bill = 50 * 1678 + (kWh - 50) * 1734;
+                    } else if (kWh <= 200) {
+                        bill = 50 * 1678 + 50 * 1734 + (kWh - 100) * 2014;
+                    } else if (kWh <= 300) {
+                        bill = 50 * 1678 + 50 * 1734 + 100 * 2014 + (kWh - 200) * 2536;
+                    } else if (kWh <= 400) {
+                        bill = 50 * 1678 + 50 * 1734 + 100 * 2014 + 100 * 2536 + (kWh - 300) * 2834;
+                    } else {
+                        bill = 50 * 1678 + 50 * 1734 + 100 * 2014 + 100 * 2536 + 100 * 2834 + (kWh - 400) * 2927;
+                    }
+                    printf("Electricity bill: %.2f VND\n", bill);
+                }
+                printf("Press Enter to continue.");
+                getch();
+                system("cls");
+                break;
+
+            case 5:
+                // Exit the program
+                printf("Exiting the program.\n");
+                return 0;
+
+            default:
+                // Handle invalid input
+                printf("Invalid exercise choice. Please enter again.\n");
+                printf("Press Enter to continue.");
+                getch();
+                system("cls");
+        }
+    }
+
+    return 0;
+}
