@@ -2,33 +2,42 @@
 #include <math.h>
 #include <stdbool.h>
 //case 8
-struct sinhVien {
-    char tenSV[50];
-    float diem;
-    char hocLuc[15];
-} dsSV[50], sv;
-void NhapSV(struct sinhVien dsSV[], int n);
-void XuatSV(struct sinhVien dsSV[], int n);
-void SapXepSV(struct sinhVien dsSV[], int n);
-void NhapSV(struct sinhVien dsSV[], int n) {
+struct Student {
+    char name[50];
+    float score;
+    char grade[15];
+} studentList[50], student;
+
+// Function prototypes
+void InputStudents(struct Student studentList[], int numStudents);
+void OutputStudents(struct Student studentList[], int numStudents);
+void SortStudents(struct Student studentList[], int numStudents);
+
+// Function to input information of students
+void InputStudents(struct Student studentList[], int numStudents) {
     int i;
-    for (i = 0; i < n; i++) {
+    for (i = 0; i < numStudents; i++) {
         fflush(stdin);
-        printf("Nhap sinh vien %d\n", i + 1);
-        printf("Ho ten: "); gets(dsSV[i].tenSV);
-        printf("Nhap diem: "); scanf("%f", &dsSV[i].diem);
-        if (dsSV[i].diem >= 9)
-            strcpy(dsSV[i].hocLuc, "Xuat sac");
-        else if (dsSV[i].diem >= 8)
-            strcpy(dsSV[i].hocLuc, "Gioi");
-        else if (dsSV[i].diem >= 6.5)
-            strcpy(dsSV[i].hocLuc, "Kha");
-        else if (dsSV[i].diem >= 5)
-            strcpy(dsSV[i].hocLuc, "Trung Binh");
+        printf("Enter information for student %d\n", i + 1);
+        printf("Full name: "); 
+        gets(studentList[i].name);
+        printf("Enter score: "); 
+        scanf("%f", &studentList[i].score);
+
+        // Determine grade based on score
+        if (studentList[i].score >= 9)
+            strcpy(studentList[i].grade, "Excellent");
+        else if (studentList[i].score >= 8)
+            strcpy(studentList[i].grade, "Good");
+        else if (studentList[i].score >= 6.5)
+            strcpy(studentList[i].grade, "Fair");
+        else if (studentList[i].score >= 5)
+            strcpy(studentList[i].grade, "Average");
         else
-            strcpy(dsSV[i].hocLuc, "Yeu");
+            strcpy(studentList[i].grade, "Weak");
     }
 }
+
 	
 void SapXepSV(struct sinhVien dsSV[], int n) {
     int i, j;
