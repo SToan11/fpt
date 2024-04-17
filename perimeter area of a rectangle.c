@@ -1,13 +1,23 @@
-#include<stdio.h>
-int main (){
-	printf("CHU VI DIEN TICH HCN:\n");
-	float cv, dt, dai, rong;
-	printf("nhap chieu dai:");
-	scanf("%f", &dai);
-	printf("nhap chieu rong:");
-	scanf("%f", &rong);
-	cv=2*(dai+rong);
-	dt=(dai*rong);
-	printf("chu vi: %f\n", cv);
-	printf("dien tich: %f", dt);
+#include <stdio.h>
+
+int main() {
+    printf("PERIMETER AND AREA OF A RECTANGLE:\n");
+
+    float perimeter, area, length, width;
+
+    // Input length and width of the rectangle
+    printf("Enter the length: ");
+    scanf("%f", &length);
+    printf("Enter the width: ");
+    scanf("%f", &width);
+
+    // Calculate perimeter and area
+    perimeter = 2 * (length + width);
+    area = length * width;
+
+    // Print the calculated perimeter and area
+    printf("Perimeter: %f\n", perimeter);
+    printf("Area: %f\n", area);
+
+    return 0;
 }

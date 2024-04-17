@@ -1,12 +1,17 @@
 #include<stdio.h>
+
 int main(){
-	float bk, cv, dt;
-	const float PI = 3.14;
-	printf("nhap vao ban kinh:");
-	scanf("%f", &bk);
-	cv = 2 * PI * bk;
-	dt = bk * bk * PI;
-	printf("Chu vi: %f \n", cv);
-	printf("Dien tich: %f", dt);	
-	return 0;
+    float radius, circumference, area;
+    const float PI = 3.14;
+
+    printf("Enter the radius: ");
+    scanf("%f", &radius);
+
+    circumference = 2 * PI * radius;
+    area = radius * radius * PI;
+
+    printf("Circumference: %f \n", circumference);
+    printf("Area: %f", area);
+
+    return 0;
 }

@@ -1,21 +1,25 @@
-//bx+c=0
 #include<stdio.h>
+
 int main(){
-	printf("Giai phuong trinh bac 1\n");
-	float b, c, x;
-	printf("nhap b: ");
-	scanf("%f", &b);
-	printf("nhap c: ");
-	scanf("%f", &c);
-	if(b == 0){
-		if(c==0){
-			printf("phuong trinh vo so nghiem");
-		}else{
-			printf("phuong trinh vo nghiem");
-		}
-	}else{
-	x = -c/b;
-	printf("Nghiem x =%f", x);
-	}
-	return 0;
+    printf("Solving linear equation bx + c = 0\n");
+    float b, c, x;
+    
+    printf("Enter the value of b: ");
+    scanf("%f", &b);
+    
+    printf("Enter the value of c: ");
+    scanf("%f", &c);
+    
+    if(b == 0){
+        if(c == 0){
+            printf("The equation has infinitely many solutions");
+        }else{
+            printf("The equation has no solution");
+        }
+    }else{
+        x = -c / b;
+        printf("The solution is x = %f", x);
+    }
+    
+    return 0;
 }

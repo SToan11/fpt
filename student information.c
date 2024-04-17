@@ -1,38 +1,43 @@
 #include <stdio.h>
 
-struct SinhVien {
-    char mssv[50];
-    char tenSV[50];
-    char nganhHoc[50];
-    float diemTB;
-} mangSV[50]; 
+// Define a structure to represent a student
+struct Student {
+    char mssv[50];      // Student ID
+    char tenSV[50];     // Student name
+    char nganhHoc[50];  // Major
+    float diemTB;       // GPA
+} studentArray[50];     // Array of student structures
 
 int main() {
-    int i, n; 
+    int i, n; // Loop variables and number of students
 
-    printf("Nhap so sinh vien moi them: ");
+    // Prompt the user to input the number of students to add
+    printf("Enter the number of students to add: ");
     scanf("%d", &n);
+
+    // Input information for each student
     for (i = 0; i < n; i++) {
-        printf("Nhap thong tin cho sinh vien thu %d:\n", i + 1);
-        printf("MSSV: ");
-        scanf("%s", mangSV[i].mssv);
-        printf("Ten SV: ");
-        scanf("%s", mangSV[i].tenSV);
-        printf("Nganh hoc: ");
-        scanf("%s", mangSV[i].nganhHoc);
-        printf("Diem trung binh: ");
-        scanf("%f", &mangSV[i].diemTB);
+        printf("\nEnter information for student %d:\n", i + 1);
+        printf("Student ID: ");
+        scanf("%s", studentArray[i].mssv);
+        printf("Student Name: ");
+        scanf("%s", studentArray[i].tenSV);
+        printf("Major: ");
+        scanf("%s", studentArray[i].nganhHoc);
+        printf("GPA: ");
+        scanf("%f", &studentArray[i].diemTB);
     }
-    printf("\nThong tin cua tat ca sinh vien:\n");
+
+    // Display information of all students
+    printf("\nInformation of all students:\n");
     for (i = 0; i < n; i++) {
-        printf("Sinh vien %d:\n", i + 1);
-        printf("MSSV: %s\n", mangSV[i].mssv);
-        printf("Ten SV: %s\n", mangSV[i].tenSV);
-        printf("Nganh hoc: %s\n", mangSV[i].nganhHoc);
-        printf("Diem trung binh: %.2f\n", mangSV[i].diemTB);
+        printf("Student %d:\n", i + 1);
+        printf("Student ID: %s\n", studentArray[i].mssv);
+        printf("Student Name: %s\n", studentArray[i].tenSV);
+        printf("Major: %s\n", studentArray[i].nganhHoc);
+        printf("GPA: %.2f\n", studentArray[i].diemTB);
         printf("\n");
     }
 
-    return 0;
+    return 0; // Exit the program
 }
-
