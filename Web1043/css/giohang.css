@@ -1,0 +1,55 @@
+/* Set fixed width and height for the table */
+#cart-table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+/* Set fixed width for each column */
+#cart-table th, #cart-table td {
+    padding: 10px;
+    text-align: center;
+}
+
+/* Set fixed height for table rows */
+#cart-table tr {
+    height: 60px;
+}
+
+/* Set fixed width for the quantity input */
+#cart-table input[type="number"] {
+    width: 50px;
+}
+
+/* Product styling */
+.sanpham {
+    display: inline-block;
+    width: 200px;
+    margin: 10px;
+    text-align: center;
+}
+
+.sanpham img {
+    width: 100%;
+    height: auto;
+}
+
+.sanpham h5 {
+    margin: 10px 0;
+}
+
+.sanpham p {
+    margin: 5px 0;
+}
+
+.sanpham button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.sanpham button:hover {
+    background-color: #0056b3;
+}
