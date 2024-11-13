@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Sử dụng prompt để người dùng nhập giá trị diện tích bằng mét vuông
+        const m2 = prompt("Nhập diện tích (m²):");
+
+        // Chuyển đổi sang sào
+        // 1 sào = 1000m²
+        const sao = m2 / 360;
+
+        // Chuyển đổi sang ha
+        // 1 ha = 10000m²
+        const ha = m2 / 3600;
+
+        // Chuyển đổi sang mẫu
+        // 1 mẫu = 10 sào = 10000m²
+        const mau = m2 / 3600;
+
+        // Hiển thị kết quả bằng alert
+        alert(` ${m2}m² là:
+                ${sao} sào
+                ${ha} ha
+                ${mau} mẫu`);
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var x = 10 + Math.round(5 * Math.random()); 
+
+        var a = prompt("Nhập số từ 10 - 15 :");
+        a = parseInt(a);
+        
+        if (a == x) {
+            alert("Bạn đã đoán đúng");
+        } else if (a < x) {
+            alert("Số của bạn bé hơn số bí mật");
+        } else {
+            alert("Số của bạn lớn hơn số bí mật");
+        }
+    </script>
+</body>
+</html>
