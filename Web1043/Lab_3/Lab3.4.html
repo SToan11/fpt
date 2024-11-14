@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Rock Paper Scissors</h1>
+    <input type="button" value="Rock" onclick="getValue(0);"/>
+    <input type="button" value="Paper" onclick="getValue(1);"/>
+    <input type="button" value="Scissors" onclick="getValue(2);"/>
+    
+    <div id="result" class="result"></div>
+
+    <script>
+        var arr = ['Rock', 'Paper', 'Scissors'];
+
+        function getValue(c) {
+            var s = Math.floor(Math.random() * 3);
+            var userChoice = arr[c];
+            var computerChoice = arr[s];
+            var ketqua = "";
+
+            if (c === s) {
+                ketqua = "Hòa!";
+            } else {
+                switch (c) {
+                    case 0:
+                        ketqua = (s === 2) ? "Bạn thắng! Rock thắng Scissors." : "Bạn thua! Paper thắng Rock.";
+                        break;
+                    case 1:
+                        ketqua = (s === 0) ? "Bạn thắng! Paper thắng Rock." : "Bạn thua! Scissors thắng Paper.";
+                        break;
+                    case 2:
+                        ketqua = (s === 1) ? "Bạn thắng! Scissors thắng Paper." : "Bạn thua! Rock thắng Scissors.";
+                        break;
+                }
+            }
+
+            document.getElementById("result").innerText = "Bạn chọn: " + userChoice + "\nMáy chọn: " + computerChoice + "\nKết quả: " + ketqua;
+        }
+    </script>
+</body>
+</html>

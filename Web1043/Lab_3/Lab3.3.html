@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .row{
+            width: 250px;
+            height: 200px;
+            border: 1px solid red;
+            text-align: center;
+        }
+        button{
+            height: 50px;
+            width: 50px;
+            background-color: aqua;
+            outline:  none;
+            border: 1px solid beige;
+            font-size: 25px;
+            border-radius: 50%;
+        }
+        #tt{
+            background-color: rgb(229, 125, 125);
+        }
+        #bang{
+            color: white;
+            background-color: black;
+        }
+        #ll{
+            background-color: rgb(187, 30, 129);
+        }
+        button:active{
+            opacity: 0.5;
+        }
+        input {
+            grid-column: span 4;
+            height: 25px;
+            width: 294px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>MÁY TÍNH</h1>
+
+    <!-- <input type="text" id="display" readonly> -->
+    <div class="row">
+        <button onclick="toan_hang(7)">7</button>
+        <button onclick="toan_hang(8)">8</button>
+        <button onclick="toan_hang(9)">9</button>
+        <button onclick="toan_tu('+')" id="tt">+</button>
+        <br>
+        
+        <button onclick="toan_hang(4)">4</button>
+        <button onclick="toan_hang(5)">5</button>
+        <button onclick="toan_hang(6)">6</button>
+        <button onclick="toan_tu('-')"id="tt">-</button>
+        <br>
+
+        <button onclick="toan_hang(1)">1</button>
+        <button onclick="toan_hang(2)">2</button>
+        <button onclick="toan_hang(3)">3</button>
+        <button onclick="toan_tu('*')"id="tt">*</button>
+        <br>
+        
+        <button onclick="toan_hang(0)">0</button>
+        <button onclick="lam_lai()" id="ll">C</button>
+        <button onclick="thuc_hien()" id="bang">=</button>
+        <button onclick="toan_tu('/')"id="tt">/</button>
+    </div>
+    <script src="Lab3.3.js"></script>
+</body>
+</html>
