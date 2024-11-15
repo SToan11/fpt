@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let inventory = [];
+
+        let item1 = {
+            name : "Laptop",
+            model: "A123",
+            cost: 1000,
+            quantity: 10
+        }
+        let item2 = {
+            name: "Smartphone",
+            model: "B456",
+            cost: 700,
+            quantity: 15
+        };
+
+        let item3 = {
+            name: "Tablet",
+            model: "C789",
+            cost: 500,
+            quantity: 20
+        };
+
+        inventory.push(item1, item2, item3);
+        console.log(inventory);
+
+        console.log("Số lượng sản phẩm 3 (Tablet):", inventory[2].quantity);
+
+    </script>
+</body>
+</html>

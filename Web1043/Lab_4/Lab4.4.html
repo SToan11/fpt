@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Window Control</title>
+</head>
+<body>
+    <button onclick="openNewWindow()">Mở cửa sổ mới</button>
+    <button onclick="closeNewWindow()">Đóng cửa sổ mới</button>
+    <button onclick="checkWindowStatus()">Kiểm tra cửa sổ mới đã đóng hay chưa</button>
+
+    <script>
+        let newWindow;
+
+        function openNewWindow() {
+            let features = "toolbar=yes,menubar=yes";
+            if (navigator.userAgent.indexOf("MSIE") !== -1 || !!document.documentMode === true) {
+                // Internet Explorer
+                newWindow = window.open("", "", "width=100,height=100," + features);
+            } else {
+                // Other browsers
+                newWindow = window.open("", "", "width=150,height=150," + features);
+            }
+        }
+
+        function closeNewWindow() {
+            if (newWindow && !newWindow.closed) {
+                newWindow.close();
+            }
+        }
+
+        function checkWindowStatus() {
+            if (newWindow && !newWindow.closed) {
+                alert("Cửa sổ mới chưa đóng.");
+            } else {
+                alert("Cửa sổ mới đã đóng.");
+            }
+        }
+    </script>
+</body>
+</html>

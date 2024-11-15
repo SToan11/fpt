@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick="sv.hienThi();"">Hiển thị</button> 
+    <script>
+        var sv = new Object();
+        sv.hoTen = prompt("Ho va Te n");
+        sv.Diem = parseFloat(prompt("Diem"));
+
+        sv.hienThi = function(){
+            document.write("Ho va ten: " + this.hoTen + "<br> Diem: " + this.Diem );
+            if(this.Diem >= 5){
+            this.hocLuc = "Đậu";
+            } else {
+            this.hocLuc = "Rớt";
+            }
+            document.write("<h3>Họ và tên: "+this.hoTen+"</h3>");
+            document.write("<h3>Điểm TB: "+this.Diem+"</h3>");
+            document.write("<h3>Học lực: "+this.hocLuc+"</h3>");
+        }
+
+    </script>
+</body>
+</html>
