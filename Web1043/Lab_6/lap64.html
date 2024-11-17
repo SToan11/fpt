@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Clicker Speed Test Game</title>
+    <style>
+        #gameArea {
+            width: 500px;
+            height: 500px;
+            border: 1px solid black;
+            position: relative;
+            background-color: black;
+            background-size: cover;
+            background-position: center;
+        }
+        .redBox {
+            width: 50px;
+            height: 50px;
+            background-image: url('img1/1.jpg');
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Game thử tốc độ phản ứng</h2>
+<div id="gameArea"></div>
+<p id="result"></p>
+
+<script>
+    let startTime, endTime;
+    const gameArea = document.getElementById('gameArea');
+    const result = document.getElementById('result');
+
+    function createRedBox() {
+        const redBox = document.createElement('div');
+        redBox.classList.add('redBox');
+        redBox.style.top = Math.random() * (gameArea.clientHeight - 50) + 'px';
+        redBox.style.left = Math.random() * (gameArea.clientWidth - 50) + 'px';
+        redBox.onclick = function() {
+            endTime = new Date().getTime();
+            const duration = endTime - startTime;
+            result.textContent = 'Time: ' + duration + ' ms';
+            gameArea.removeChild(redBox);
+            startGame();
+        };
+        gameArea.appendChild(redBox);
+        startTime = new Date().getTime();
+    }
+
+    function startGame() {
+        setTimeout(createRedBox, Math.random() * 1000 + 500);
+    }
+
+    startGame();
+</script>
+
+</body>
+</html> 

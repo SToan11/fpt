@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Rollover and Slideshow</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        .banner {
+            width: 100%;
+            height: 500px;
+            float: left;
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .banner_slider {
+            float: left;
+            width: 100%;
+            height: 100%;
+        }
+
+        .banner_slider img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .sanpham {
+            float: left;
+            width: 100%;
+            min-height: 200px;
+            padding: 20px;
+        }
+
+        .sp_1 {
+            width: calc(33.3% - 20px);
+            height: 470px;
+            float: left;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 8px #999;
+        }
+
+        .sp_1_img {
+            width: 100%;
+            height: 260px;
+            padding: 10px;
+            float: left;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .sp_1_img:hover {
+            transition: 0.5s;
+            transform: scale(1.4);
+        }
+
+        .btn {
+            font-size: 45px;
+            color: #999;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: 0.5s;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            color: white;
+            display: block;
+        }
+
+        .btn_left {
+            left: 0;
+        }
+
+        .btn_right {
+            right: 0;
+        }
+
+        .imagerollover {
+            display: inline-block;
+            position: relative;
+        }
+
+        .imagerollover img {
+            width: 500px;
+            height: 300px;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Image Rollover and Slideshow</h2>
+
+    <div class="banner">
+        <div class="banner_slider">
+            <img src="img1/1.jpg" alt="" id="banner-01">
+            <img src="img1/2.jpg" alt="">
+            <img src="img1/3.jpg" alt="">
+            <img src="img1/4.jpg" alt="">
+        </div>
+        <div class="btn_slider">
+            <div class="btn_left btn"><i class='bx bxs-chevrons-left'></i></div>
+            <div class="btn_right btn"><i class='bx bxs-chevrons-right'></i></div>
+        </div>
+    </div>
+    <div class="imagerollover">
+        <img src="img1/1.jpg" id="imagerollover">
+    </div>
+    <script>
+        const slider = document.querySelector('.banner_slider');
+        const btnleft = document.querySelector('.btn_left');
+        const btnright = document.querySelector('.btn_right');
+        var hinh = ['img1/1.jpg', 'img1/4.jpg', 'img1/1.jpg', 'img1/4.jpg'];
+        let dai = hinh.length;
+        let i = 0;
+
+        const sliderFun = function () {
+            if (i == dai - 1) {
+                i = 0;
+            } else {
+                i++;
+            }
+            document.getElementById('banner-01').src = hinh[i];
+        }
+        let event = setInterval(sliderFun, 4000);
+
+        btnright.addEventListener('click', function () {
+            clearInterval(event);
+            sliderFun();
+            event = setInterval(sliderFun, 4000);
+        })
+
+        btnleft.addEventListener('click', function () {
+            clearInterval(event);
+            if (i == 0) {
+                i = dai - 1;
+            } else {
+                i--;
+            }
+            document.getElementById('banner-01').src = hinh[i];
+            event = setInterval(sliderFun, 4000);
+        })
+
+        const image = document.getElementById('imagerollover');
+
+        image.addEventListener('mouseover', function () {
+            this.src = 'img1/2.jpg';
+        });
+
+        image.addEventListener('mouseout', function () {
+            this.src = 'img1/1.jpg';
+        });
+    </script>
+
+</body>
+
+</html>

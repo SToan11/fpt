@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiền Vé Tour Du Lịch Vịnh Hạ Long</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        table {
+            margin: auto;
+            border-collapse: collapse;
+            width: 80%;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        td {
+            background-color: #f2f2f2;
+        }
+        #total {
+            font-weight: bold;
+        }
+        .hidden {
+            display: none;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>TIỀN VÉ TOUR DU LỊCH VỊNH HẠ LONG</h1>
+    <table id="tourTable">
+        <thead>
+            <tr>
+                <th>Gia đình</th>
+                <th>Số người lớn</th>
+                <th>Số trẻ em</th>
+                <th>Tiền</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Đào kho Báu</td>
+                <td>5</td>
+                <td>1</td>
+                <td>5,600,000</td>
+            </tr>
+            <tr>
+                <td>Đỗ đạt Cao</td>
+                <td>3</td>
+                <td>2</td>
+                <td>4,200,000</td>
+            </tr>
+            <tr>
+                <td>Mai anh Tới</td>
+                <td>2</td>
+                <td>1</td>
+                <td>2,600,000</td>
+            </tr>
+            <tr>
+                <td>Phạm kỹ Luật</td>
+                <td>2</td>
+                <td>1</td>
+                <td>2,600,000</td>
+            </tr>
+            <tr>
+                <td>Mai anh Bảo</td>
+                <td>2</td>
+                <td>1</td>
+                <td>2,600,000</td>
+            </tr>
+            <tr id="total">
+                <td>Tổng</td>
+                <td id="totalAdults">0</td>
+                <td id="totalChildren">0</td>
+                <td id="totalMoney">0</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="buttons">
+        <button onclick="calculate()">Tính</button>
+        <button onclick="toggleVisibility()">Ẩn Hiện</button>
+    </div>
+
+    <script>
+        function calculate() {
+            const rows = document.querySelectorAll('#tourTable tbody tr');
+            let totalAdults = 0;
+            let totalChildren = 0;
+            let totalMoney = 0;
+
+            rows.forEach((row, index) => {
+                if (index < rows.length - 1) {
+                    const adults = parseInt(row.cells[1].textContent);
+                    const children = parseInt(row.cells[2].textContent);
+                    const money = parseInt(row.cells[3].textContent.replace(/,/g, ''));
+
+                    totalAdults += adults;
+                    totalChildren += children;
+                    totalMoney += money;
+                }
+            });
+
+            document.getElementById('totalAdults').textContent = totalAdults;
+            document.getElementById('totalChildren').textContent = totalChildren;
+            document.getElementById('totalMoney').textContent = totalMoney.toLocaleString();
+        }
+
+        function toggleVisibility() {
+            const totalRow = document.getElementById('total');
+            totalRow.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
