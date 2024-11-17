@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 1320px;
+            margin: 0 auto;
+        }
+        .Allitem{
+            
+            text-align: center;
+        }
+        .Product{
+            margin-left: 380px;
+        }
+        #cart>tr:hover{
+            transform: scale(1.1);
+            transition: 1s;
+        }
+        td{
+            width: 190px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="Allitem">
+            <h1>Product</h1>
+            <table border="1" class="Product">
+                <tr>
+                    <td>Iphone 20 pro max</td>
+                    <td>8999$</td>
+                    <td><button onclick="them(this)">Them</button></td>
+                </tr>
+                <tr>
+                    <td>Iphone 19 pro max</td>
+                    <td>7999$</td>
+                    <td><button onclick="them(this)">Them</button></td>
+                </tr>
+                <tr>
+                    <td>Iphone 18 pro max</td>
+                    <td>6999$</td>
+                    <td><button onclick="them(this)">Them</button></td>
+                </tr>
+                <tr>
+                    <td>Iphone 17 pro max</td>
+                    <td>5999$</td>
+                    <td><button onclick="them(this)">Them</button></td>
+                </tr>
+            </table>
+            <h1>Cart</h1>
+            <table id="cart" border="1" class="Product"></table>
+            <div class="tong" id="tong"></div>
+        </div>
+    </div>
+    <script>
+        function them(button){
+            var copybutton = button.parentElement.parentElement.cloneNode(true)
+            var btnaddxoa = copybutton.getElementsByTagName("button")[0]
+            btnaddxoa.innerText = "Xoa"
+            btnaddxoa.setAttribute('onclick', 'xoa(this)')
+            document.getElementById("cart").appendChild(copybutton)
+            tongtien()
+        }
+        function xoa(button) {
+            var buttonxoa = button.parentElement.parentElement
+            document.getElementById('cart').removeChild(buttonxoa)
+            tongtien()
+        }
+        function tongtien() {
+            var item = document.getElementById('cart')
+            var itemthu = item.getElementsByTagName('tr')
+            var tong = 0;
+            for (let i = 0; i < itemthu.length; i++) {
+                var dong = itemthu[i].getElementsByTagName('td')
+                var price = dong[1].innerText.slice(0, -1)
+                tong += parseFloat(price)
+            }
+            document.getElementById('tong').innerText = "Tổng Tiền: " + tong + "$"
+        }
+    </script>
+</body>
+</html>

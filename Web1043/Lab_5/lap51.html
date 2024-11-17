@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function dis(){
+    var pi = document.getElementById('item1');
+    var qt = document.getElementById('sl')
+    var li = pi.getAttribute('price')
+    var qty = li * qt.value;
+    document.getElementById('name').innerText = "Tên Sản Phẩm: " + pi.innerText
+    document.getElementById('soluong').innerText = "Số Lượng Mua: " + qt.value
+    document.getElementById('gia').innerText = "Cái Giá Phải Trả: " + qty + "$"
+}
+    </script>
+</head>
+<body>
+    <div id="item1" price="12000">IPhone 9</div>
+    <input type="number" id="sl" value="1">
+    <button onclick="dis()">OK</button>
+    <div class="" id="name"></div>
+    <div class="" id="soluong"></div>
+    <div class="" id="gia"></div>
+</body>
+</html>
