@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Rating</title>
+    <style>
+        .star {
+            font-size: 30px;
+            cursor: pointer;
+        }
+        .checked {
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+
+<span class="star" id="star1" onclick="rate(1)">&#9733;</span>
+<span class="star" id="star2" onclick="rate(2)">&#9733;</span>
+<span class="star" id="star3" onclick="rate(3)">&#9733;</span>
+<span class="star" id="star4" onclick="rate(4)">&#9733;</span>
+<span class="star" id="star5" onclick="rate(5)">&#9733;</span>
+
+<script>
+    function rate(star) {
+        for (let i = 1; i <= 5; i++) {
+            let starElement = document.getElementById('star' + i);
+            starElement.classList.remove('checked');
+        }
+        for (let i = 1; i <= star; i++) {
+            let starElement = document.getElementById('star' + i);
+            starElement.classList.add('checked');
+        }
+    }
+</script>
+
+</body>
+</html>
