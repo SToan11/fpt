@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <h1>Custom HTML5 Video Player</h1>
+        <div id="player-container">
+            <video src="Download.mp4" id="myPlayer" width="640px" height="360px">
+                Your browser does not support HTML5 video.
+            </video>
+            <div class="controls">
+                <button onclick="playPause()">Play/Pause</button>
+                <button onclick="stopVideo()">Stop</button>
+                <button onclick="replayVideo()">Replay</button>
+                <button onclick="increaseVolume()">Volume(+)</button>
+                <button onclick="decreaseVolume()">Volume(-)</button>
+                <button onclick="muteVolume()">Mute</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var player = document.getElementById("myPlayer");
+
+    function playPause() {
+        if (player.paused) {
+            player.play();
+        } else {
+            player.pause();
+        }
+    }
+
+    function stopVideo() {
+        player.pause();
+        player.currentTime = 0;
+    }
+
+    function replayVideo() {
+        player.currentTime = 0;
+        player.play();
+    }
+
+    function increaseVolume() {
+        if (player.volume < 1) {
+            player.volume = Math.min(player.volume + 0.1, 1);
+        }
+    }
+
+    function decreaseVolume() {
+        if (player.volume > 0) {
+            player.volume = Math.max(player.volume - 0.1, 0);
+        }
+    }
+
+    function muteVolume() {
+        player.muted = !player.muted;
+    }
+</script>
+</html>
