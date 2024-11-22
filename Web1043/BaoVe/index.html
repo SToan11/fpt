@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        input[type="text"], input[type="password"], select {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+
+        .error {
+            color: red;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Đăng ký</h2>
+        <p>Nhanh chóng và dễ dàng.</p>
+        <form id="FrmDangKi">
+            <div class="form-group">
+                <input type="text" id="ho" placeholder="Họ">
+                <span class="error" id="hoError"></span>
+            </div>
+            <div class="form-group">
+                <input type="text" id="ten" placeholder="Tên">
+                <span class="error" id="tenError"></span>
+            </div>
+            <div class="form-group">
+                <input type="text" id="contact" placeholder="Số di động hoặc email">
+                <span class="error" id="contactError"></span>
+            </div>
+            <div class="form-group">
+                <input type="password" id="password" placeholder="Mật khẩu mới">
+                <span class="error" id="passwordError"></span>
+            </div>
+            <div class="form-group">
+                <label for="ngaySinh">Ngày sinh</label>
+                <select id="ngaySinh">
+                </select>
+                <select id="thangSinh">
+                </select>
+                <select id="namSinh">
+                </select>
+                <span class="error" id="dobError"></span>
+            </div>
+            <div class="form-group">
+                <label for="gioiTinh">Giới tính</label><br>
+                <input type="radio" name="gioiTinh" value="Nu"> Nữ
+                <input type="radio" name="gioiTinh" value="Nam"> Nam
+                <input type="radio" name="gioiTinh" value="TuyChinh"> Tùy chỉnh
+                <br>
+                <span class="error" id="genderError"></span>
+            </div>
+            <button type="button" onclick="validateForm()">Đăng ký</button>
+        </form>
+    </div>
+    <script>
+        function validateForm() {
+            document.getElementById('hoError').innerText = '';
+            document.getElementById('tenError').innerText = '';
+            document.getElementById('contactError').innerText = '';
+            document.getElementById('passwordError').innerText = '';
+            document.getElementById('dobError').innerText = '';
+            document.getElementById('genderError').innerText = '';
+
+            let isValid = true;
+
+            // Validate Họ
+            const ho = document.getElementById('ho').value;
+            if (ho.length === 0) {
+                document.getElementById('hoError').innerText = 'Chưa nhập họ.';
+                isValid = false;
+            }
+
+            // Validate Tên
+            const ten = document.getElementById('ten').value;
+            if (ten.length == 0) {
+                document.getElementById('tenError').innerText = 'Chưa nhập tên.';
+                isValid = false;
+            }
+
+            // Validate Số di động hoặc Email
+            const contact = document.getElementById('contact').value;
+            if (contact.length === 0) {
+                document.getElementById('contactError').innerText = 'Số điện thoại hoặc email không hợp lệ.';
+                isValid = false;
+            }
+
+            // Validate Mật khẩu
+            const password = document.getElementById('password').value;
+            if (password.length < 8) {
+                document.getElementById('passwordError').innerText = 'Mật khẩu phải ít nhất 8 ký tự.';
+                isValid = false;
+            }
+
+            // Validate Ngày sinh
+            const ngaySinh = document.getElementById('ngaySinh').value;
+            const thangSinh = document.getElementById('thangSinh').value;
+            const namSinh = document.getElementById('namSinh').value;
+            if (!ngaySinh || !thangSinh || !namSinh) {
+                document.getElementById('dobError').innerText = 'Ngày sinh bắt buộc chọn.';
+                isValid = false;
+            }
+
+            // Validate Giới tính
+            const gioiTinh = document.querySelector('input[name="gioiTinh"]:checked');
+            if (!gioiTinh) {
+                document.getElementById('genderError').innerText = 'Giới tính bắt buộc chọn.';
+                isValid = false;
+            }
+
+            if (isValid) {
+                alert('Đăng ký thành công!');
+            }
+        }
+        const daySelect = document.getElementById('ngaySinh');
+        for (let i = 1; i <= 31; i++) {
+            const option = document.createElement('option');
+            option.value = i;
+            option.textContent = i;
+            daySelect.appendChild(option);
+        }
+
+        const monthSelect = document.getElementById('thangSinh');
+        for (let i = 1; i <= 12; i++) {
+            const option = document.createElement('option');
+            option.value = i;
+            option.textContent = i;
+            monthSelect.appendChild(option);
+        }
+
+        const yearSelect = document.getElementById('namSinh');
+        const currentYear = new Date().getFullYear();
+        for (let i = currentYear; i >= 1900; i--) {
+            const option = document.createElement('option');
+            option.value = i;
+            option.textContent = i;
+            yearSelect.appendChild(option);
+        }
+    </script>
+</body>
+</html>

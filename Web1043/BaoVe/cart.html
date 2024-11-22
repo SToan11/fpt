@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảng Đặt Vé Du Lịch</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Tên hộ</th>
+                <th>Tour</th>
+                <th>Người lớn</th>
+                <th>Trẻ em</th>
+                <th>Thành tiền</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Nguyễn Văn An</td>
+                <td>Đà Nẵng - Hội An</td>
+                <td><input type="number" value="1" min="0" class="nguoilon" onchange="tongtien(this)"></td>
+                <td><input type="number" value="1" min="0" class="treem" onchange="tongtien(this)"></td>
+                <td class="total">2100000</td>
+            </tr>
+            <tr>
+                <td>Trần Văn Bình</td>
+                <td>Phú Quốc</td>
+                <td><input type="number" value="1" min="0" class="nguoilon" onchange="tongtien(this)"></td>
+                <td><input type="number" value="1" min="0" class="treem" onchange="tongtien(this)"></td>
+                <td class="total">2100000</td>
+            </tr>
+            <tr>
+                <td>Nguyễn Văn Nguyên</td>
+                <td>Phú Quý</td>
+                <td><input type="number" value="1" min="0" class="nguoilon" onchange="tongtien(this)"></td>
+                <td><input type="number" value="1" min="0" class="treem" onchange="tongtien(this)"></td>
+                <td class="total">2100000</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        const giaNguoiLon = 1500000;
+        const giaTreEm = 600000;
+
+        function tongtien(element) {
+            const row = element.parentElement.parentElement;
+            const nguoilon = row.querySelector('.nguoilon').value;
+            const treem = row.querySelector('.treem').value;
+            const total = (nguoilon * giaNguoiLon) + (treem * giaTreEm);
+            row.querySelector('.total').textContent = total;
+        }
+    </script>
+</body>
+</html>
