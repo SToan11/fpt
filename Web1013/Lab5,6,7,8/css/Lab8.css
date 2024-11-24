@@ -1,0 +1,143 @@
+body{
+    margin: 0;
+}
+*{
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    width: 1320px;
+    margin: 0 auto;
+    height: 930px;
+    border: 4px solid yellow;
+}
+header{
+    position: relative;
+    width: 100%;
+    float: left;
+    height: 300px;
+    background-color: aqua;
+}
+header img{
+    width: 100%;
+    height: 300px;
+}
+.menu>ul>li{
+    display: inline-block;
+}
+.menu>ul>li>a{
+    display: inline-block;
+}
+.menu>ul{
+    padding:0px;
+    margin:0px;
+    list-style:none;
+    border-radius:3px;
+    background-color:orangered;
+    text-align:center;
+}
+.menu>ul>li>a{
+    text-decoration:none;
+    font-variant:small-caps;
+    font-size:larger;
+    color:white;
+    padding:0 10px;
+    line-height:40px;
+}
+.menu>ul>li{
+    position: relative;
+}
+.menu ul ul a{
+    line-height:30px;
+    color:orangered;
+    text-decoration:none;
+    font-variant:small-caps;
+    font-size:larger;
+    padding:0 10px;
+}
+.menu ul ul a:hover{
+    background-color:orangered;
+    color:white;
+} 
+.menu ul ul{
+    position: absolute;
+    display: none;
+    padding:0;
+    margin:0 ;
+    list-style:none;
+    border-radius:3px;
+    width:90px;
+    background-color:white;
+    box-shadow:0 0 1px gray;
+}
+.menu>ul>li:hover>ul{
+    display: block;
+}
+.menu>ul>li>a:hover{
+    color:yellow
+}
+
+.logo{
+    position: absolute;
+    left: 10px;
+    bottom: 30px;
+    width: 400px;
+    height: 50px;
+}
+.logo h1{
+    font-size: 45px;
+    line-height: 40px;
+    color:aliceblue;
+    text-shadow: 0 0 6px red;
+}
+.row{
+    float: left;
+    width: 100%;
+    height: 500px;
+}
+.khungtrang{
+    width: 70%;
+    float: left;
+    height: 500px;
+    background-color: aliceblue;
+}
+.khungthongtin{
+    float: left;
+    width: 30%;
+    height: 500px;
+    box-shadow: 3px gray;
+    border: 2px gray solid;
+    border-radius: 6px;
+    background-color: aliceblue;
+}
+.vmenu{
+    width: 380px;
+    list-style: none;
+    border-radius: 3px;
+    margin: 5px;
+    border: 2px solid gold;
+    box-shadow:0 0 2px gray;
+}
+.vmenu a{
+    display: block;
+    border-bottom: 1px dotted orangered;
+    color: orangered;
+    font-variant: small-caps;
+    font-size: larger;
+    padding: 8px 5px 8px 30px;
+}
+.vmenu a:hover{
+    border-bottom: 1px dotted white;
+    background-color: orangered;
+    color: white;
+    font-weight: bold;
+}
+footer{
+    float: left;
+    width: 100%;
+    height: 50px;
+    background-color: aquamarine;
+    text-align: center;
+}

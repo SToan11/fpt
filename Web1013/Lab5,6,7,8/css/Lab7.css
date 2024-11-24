@@ -1,0 +1,127 @@
+body{
+    margin: 0;
+}
+*{
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    width: 1320px;
+    height: 400px;
+    margin: 0 auto;
+}
+.container1{
+    width: 1320px;
+    height: 600px;
+    margin: 0 auto;
+}
+.container2{
+    width: 1320px;
+    height: 1000px;
+    margin: 0 auto;
+}
+header{
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 200px;
+}
+header img{
+    width: 100%;
+    height: 100%;
+}
+.logo{
+    position: absolute;
+    left: 20px;
+    bottom: 10px;
+    width: 500px;
+    height: 60px;
+}
+.vmenu{
+    width: 300px;
+    padding: 0px;
+    margin: 5px;
+    list-style: none;
+    border-radius: 3px;
+    box-shadow:0 0 2px gray;
+}
+.vmenu a{
+    display: block;
+    border-bottom: 1px dotted orangered;
+    color: orangered;
+    font-variant: small-caps;
+    font-size: larger;
+    padding: 8px 5px 8px 30px;
+}
+.vmenu a:hover{
+    border-bottom: 1px dotted white;
+    background-color: orangered;
+    color: white;
+    font-weight: bold;
+}
+.row2{
+    position: relative;
+    float: left;
+    width: calc(25% - 6px);
+    margin: 3px;
+    height: 450px;
+    border: 3px solid black;
+    text-align: center;
+}
+.icon{
+    position: absolute;
+    bottom: 50px;
+    right: 10px;
+}
+.tien{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+.row2 p:hover{
+    color: red;
+    background-color: antiquewhite;
+}
+.logo{
+    color: aliceblue;
+    text-shadow: 0 0 5px orangered;
+}
+.container nav{
+    float: left;
+    width: 100%;
+    height: 50px;
+    background-color: orange;
+}
+.aa{
+    font-size: 25px;
+    line-height: 40px;
+    padding: 5px 10px;
+}
+.menu{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 360px;
+    height: 40px;
+    background-color: orangered;
+    border-radius: 0 0 0 12px;
+}
+.menu a{
+    font-size: 25px;
+    line-height: 40px;
+    padding: 5px 10px;
+}
+.bu{
+    float: right;
+    line-height: 40px;
+    font-size: 25px;
+    padding: 5px 10px;
+}
+.tien{
+    font-size: 40px;
+    color: rgb(201, 134, 9);
+}
+
+
