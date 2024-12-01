@@ -1,0 +1,14 @@
+D:\C#\Lab2\22_net101_lab2_bai4\bin\Debug\net8.0\22_net101_lab2_bai4.exe
+D:\C#\Lab2\22_net101_lab2_bai4\bin\Debug\net8.0\22_net101_lab2_bai4.deps.json
+D:\C#\Lab2\22_net101_lab2_bai4\bin\Debug\net8.0\22_net101_lab2_bai4.runtimeconfig.json
+D:\C#\Lab2\22_net101_lab2_bai4\bin\Debug\net8.0\22_net101_lab2_bai4.dll
+D:\C#\Lab2\22_net101_lab2_bai4\bin\Debug\net8.0\22_net101_lab2_bai4.pdb
+D:\C#\Lab2\22_net101_lab2_bai4\obj\Debug\net8.0\22_net101_lab2_bai4.GeneratedMSBuildEditorConfig.editorconfig
+D:\C#\Lab2\22_net101_lab2_bai4\obj\Debug\net8.0\22_net101_lab2_bai4.AssemblyInfoInputs.cache
+D:\C#\Lab2\22_net101_lab2_bai4\obj\Debug\net8.0\22_net101_lab2_bai4.AssemblyInfo.cs
+D:\C#\Lab2\22_net101_lab2_bai4\obj\Debug\net8.0\22_net101_lab2_bai4.csproj.CoreCompileInputs.cache
+D:\C#\Lab2\22_net101_lab2_bai4\obj\Debug\net8.0\22_net101_lab2_bai4.dll
+D:\C#\Lab2\22_net101_lab2_bai4\obj\Debug\net8.0\refint\22_net101_lab2_bai4.dll
+D:\C#\Lab2\22_net101_lab2_bai4\obj\Debug\net8.0\22_net101_lab2_bai4.pdb
+D:\C#\Lab2\22_net101_lab2_bai4\obj\Debug\net8.0\22_net101_lab2_bai4.genruntimeconfig.cache
+D:\C#\Lab2\22_net101_lab2_bai4\obj\Debug\net8.0\ref\22_net101_lab2_bai4.dll

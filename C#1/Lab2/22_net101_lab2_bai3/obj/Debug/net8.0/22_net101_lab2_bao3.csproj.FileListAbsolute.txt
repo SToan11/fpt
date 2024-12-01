@@ -1,0 +1,14 @@
+D:\C#\Lab2\22_net101_lab2_bao3\obj\Debug\net8.0\22_net101_lab2_bao3.GeneratedMSBuildEditorConfig.editorconfig
+D:\C#\Lab2\22_net101_lab2_bao3\obj\Debug\net8.0\22_net101_lab2_bao3.AssemblyInfoInputs.cache
+D:\C#\Lab2\22_net101_lab2_bao3\obj\Debug\net8.0\22_net101_lab2_bao3.AssemblyInfo.cs
+D:\C#\Lab2\22_net101_lab2_bao3\obj\Debug\net8.0\22_net101_lab2_bao3.csproj.CoreCompileInputs.cache
+D:\C#\Lab2\22_net101_lab2_bao3\bin\Debug\net8.0\22_net101_lab2_bao3.exe
+D:\C#\Lab2\22_net101_lab2_bao3\bin\Debug\net8.0\22_net101_lab2_bao3.deps.json
+D:\C#\Lab2\22_net101_lab2_bao3\bin\Debug\net8.0\22_net101_lab2_bao3.runtimeconfig.json
+D:\C#\Lab2\22_net101_lab2_bao3\bin\Debug\net8.0\22_net101_lab2_bao3.dll
+D:\C#\Lab2\22_net101_lab2_bao3\bin\Debug\net8.0\22_net101_lab2_bao3.pdb
+D:\C#\Lab2\22_net101_lab2_bao3\obj\Debug\net8.0\22_net101_lab2_bao3.dll
+D:\C#\Lab2\22_net101_lab2_bao3\obj\Debug\net8.0\refint\22_net101_lab2_bao3.dll
+D:\C#\Lab2\22_net101_lab2_bao3\obj\Debug\net8.0\22_net101_lab2_bao3.pdb
+D:\C#\Lab2\22_net101_lab2_bao3\obj\Debug\net8.0\22_net101_lab2_bao3.genruntimeconfig.cache
+D:\C#\Lab2\22_net101_lab2_bao3\obj\Debug\net8.0\ref\22_net101_lab2_bao3.dll
