@@ -1,0 +1,14 @@
+D:\C#\Lab4\lab4bai4\bin\Debug\net8.0\lab4bai4.exe
+D:\C#\Lab4\lab4bai4\bin\Debug\net8.0\lab4bai4.deps.json
+D:\C#\Lab4\lab4bai4\bin\Debug\net8.0\lab4bai4.runtimeconfig.json
+D:\C#\Lab4\lab4bai4\bin\Debug\net8.0\lab4bai4.dll
+D:\C#\Lab4\lab4bai4\bin\Debug\net8.0\lab4bai4.pdb
+D:\C#\Lab4\lab4bai4\obj\Debug\net8.0\lab4bai4.GeneratedMSBuildEditorConfig.editorconfig
+D:\C#\Lab4\lab4bai4\obj\Debug\net8.0\lab4bai4.AssemblyInfoInputs.cache
+D:\C#\Lab4\lab4bai4\obj\Debug\net8.0\lab4bai4.AssemblyInfo.cs
+D:\C#\Lab4\lab4bai4\obj\Debug\net8.0\lab4bai4.csproj.CoreCompileInputs.cache
+D:\C#\Lab4\lab4bai4\obj\Debug\net8.0\lab4bai4.dll
+D:\C#\Lab4\lab4bai4\obj\Debug\net8.0\refint\lab4bai4.dll
+D:\C#\Lab4\lab4bai4\obj\Debug\net8.0\lab4bai4.pdb
+D:\C#\Lab4\lab4bai4\obj\Debug\net8.0\lab4bai4.genruntimeconfig.cache
+D:\C#\Lab4\lab4bai4\obj\Debug\net8.0\ref\lab4bai4.dll
